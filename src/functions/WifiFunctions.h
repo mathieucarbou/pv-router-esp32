@@ -9,8 +9,8 @@
 #include "../config/enums.h"
 #include "../config/config.h"
 
-const char *ssid = "PV-ROUTER";
-const char *passphrase = "PV-ROUTER";
+constexpr const char *ssid = "PV-ROUTER";
+constexpr const char *passphrase = "PV-ROUTER";
 
 IPAddress local_IP(192,168,4,1);
 IPAddress gateway(192,168,4,254);
