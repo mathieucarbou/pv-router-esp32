@@ -751,7 +751,7 @@ void connect_to_wifi() {
   if (AP || strcmp(configwifi.SID,"AP") == 0 ) {
       APConnect(); 
       //AP=true; 
-      gDisplayValues.currentState = UP;
+      gDisplayValues.currentState = DEVICE_STATE::UP;
       gDisplayValues.IP = String(WiFi.softAPIP().toString());
       btStop();
       return; 
@@ -809,7 +809,7 @@ void connect_to_wifi() {
               //AP=true; 
               serial_println("timeout, go to AP mode ");
               
-              gDisplayValues.currentState = UP;
+              gDisplayValues.currentState = DEVICE_STATE::UP;
              // gDisplayValues.IP = String(WiFi.softAPIP().toString());
               APConnect(); 
         }
@@ -822,7 +822,7 @@ void connect_to_wifi() {
         serial_print("force du signal:");
         serial_print(WiFi.RSSI());
         serial_println("dBm");
-      gDisplayValues.currentState = UP;
+      gDisplayValues.currentState = DEVICE_STATE::UP;
       gDisplayValues.IP = String(WiFi.localIP().toString());
       btStop();
       #endif

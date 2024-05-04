@@ -34,7 +34,7 @@ void keepWiFiAlive(void * parameter){
         }
 
         serial_println(F("[WIFI] Connecting"));
-        gDisplayValues.currentState = CONNECTING_WIFI;
+        gDisplayValues.currentState = DEVICE_STATE::CONNECTING_WIFI;
 
         WiFi.mode(WIFI_STA);
         WiFi.setHostname(DEVICE_NAME);
@@ -63,7 +63,7 @@ void keepWiFiAlive(void * parameter){
         serial_print("force du signal:");
         serial_print(WiFi.RSSI());
         serial_println("dBm");
-        gDisplayValues.currentState = UP;
+        gDisplayValues.currentState = DEVICE_STATE::UP;
         gDisplayValues.IP = String(WiFi.localIP().toString());
         btStop();
     }

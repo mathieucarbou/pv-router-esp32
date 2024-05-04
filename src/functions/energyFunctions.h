@@ -12,8 +12,7 @@ extern Logs logging;
 // ***********************************
 // ** recherche du point 0. temps 20 ms max ... 
 // ***********************************
-unsigned long startMillis;  // pas sur que ce soit utile déjà déclaré plus bas 
-unsigned long stopMillis; // pas sur que ce soit utile déjà déclaré plus bas 
+
 
 void front() {
   int Watchdog=0 ;  

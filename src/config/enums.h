@@ -17,7 +17,7 @@
 
 // The state in which the device can be. This mainly affects what
 // is drawn on the display.
-enum DEVICE_STATE {
+enum class DEVICE_STATE {
   CONNECTING_WIFI,
   CONNECTING_AWS,
   FETCHING_TIME,
